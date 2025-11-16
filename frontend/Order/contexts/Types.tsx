@@ -1,0 +1,57 @@
+// 对购物车操作时，可能用到的参数
+export type CartAction = {
+  type:
+    | "insert_new_product"
+    | "reverse_cart"
+    | "update_cart_product_sku"
+    | "update_cart_product_quantity"
+    | "update_cart_product_weight"
+    | "update_active_product"
+    | "update_cart_product_extra"
+    | "update_cart_discount"
+    | "clear_cart"
+    | "update_cart_point"
+    | "update_cart_use_member_price"
+    | "update_cart_use_member_price_all"
+    | "update_cart_coupon"
+    | "update_cart_coupon_reduce"
+    | "update_cart_coupon_exchange"
+    | "delete_cart_coupon_exchange"
+    | "overlay_cart"
+    | "update_order_note";
+  // 原始菜品的信息
+  product?: API.Order.Product;
+  // 购物车中菜品的信息
+  cartProduct?: API.Order.CartProduct;
+  // 反结账数据
+  reverseCart?: API.Order.ReverseResponse;
+  // 初始化菜品数据
+  initData?: API.Order.InitData;
+  // 购物车中菜品的索引
+  cartProductActiveIndex?: number;
+  // 选中的菜品规格sku
+  selectedSku?: API.Order.Sku;
+  // 修改选中产品的数量
+  updatedQuantity?: number;
+  updatedWeiht?: string;
+  // 新的选中产品的索引
+  newProductIndex?: number;
+  // 修改配料
+  newExtra?: API.Order.CartProductExtra[];
+  // 修改优惠
+  cartDiscount?: API.Order.CartDiscount;
+  // 修改积分
+  cartPoint?: API.Order.UpdateCartPoint;
+  // 修改是否使用会员价
+  useMemberPrice?: boolean;
+  // 修改是否使用会员价（整单）
+  useMemberPriceAll?: boolean;
+  // 更新整单代金券
+  couponReduce?: API.Order.ValidProperty;
+  // 更新指定商品兑换券
+  couponReduceProduct?: API.Order.ValidProperty;
+  // 挂单取单，取出来的购物车信息
+  holdingCart?: API.Order.HoldingCart;
+  // 整单备注
+  order_note?: string;
+};

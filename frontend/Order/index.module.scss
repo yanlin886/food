@@ -1,0 +1,65 @@
+.new_box {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #f0f5f9;
+    box-sizing: border-box;
+
+    .container {
+        width: 97vw;
+        height: 97vh;
+        margin: 1.5vh 1.5vw;
+        display: flex;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 98px;
+        flex: 0 0 98px;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 20px 0;
+        background-color: #fff;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+
+        .logo {
+            width: 48px;
+            height: 48px;
+        }
+
+        .tab_item {
+            width: 76px;
+            height: 76px;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            font-size: 18px;
+            cursor: pointer;
+
+            &.active {
+                border-radius: 10px;
+                background-color: var(--color-base-blue);
+                color: var(--color-white);
+            }
+        }
+    }
+
+    .content {
+        width: calc(100% - 98px);
+        height: 100%;
+        margin-left: 10px;
+    }
+
+    .icon {
+        width: 36px;
+        height: 36px;
+    }
+}
