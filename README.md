@@ -29,3 +29,7 @@
 
 - `api` 订单 Golang API 测试样例
 - `frontend` 收银台主页 React context + hook 样例
+
+# 商业合作
+
+采购本系统，联系人，杨经理：15850613997（同微信）
